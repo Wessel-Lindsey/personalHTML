@@ -17,6 +17,26 @@
             border: 1px solid #ccc;
             padding: 20px;
         }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
     </style>
 
     <title>Lindsey Wessel - Portfolio</title>
@@ -32,34 +52,188 @@
             </ul>
         </nav>
     </header>
+
+
     <section id="about">
         <div class="container">
-            <img src="./images/ISU_ID1.jpg" alt="Profile Photo">
-            <h1>Lindsey Wessel</h1>
-            <p style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Student Developer</p>
-            <p>
-                I am a Junior at Iowa State University, working to get a degree
-                in Software Engineering. This Fall2023 semester I am taking:<br>
-                ComS 252 <strong>Linux</strong>, ComS 309 <strong>app design</strong>,
-                ComS 319 <strong>web design</strong>, and ComS 327 <strong>game design</strong>.
-            </p>
+            <div class="row">
+                <div class="column" style="text-align: center;">
+                    <img src="./images/ISU_ID1.jpg" alt="Profile Photo" style="height: 300px;">
+                </div>
+                <div class="column" style="text-align: center;">
+                    <h1>Lindsey Wessel</h1>
+                    <p style="font-family: 'Arial', Courier, monospace; color: darkslategray">Student Developer</p>
+                    <p>
+                        I am a Junior at Iowa State University, working to get a degree in Software Engineering. This Spring 2024 semester I am taking:<br>
+                        ComS 321 <strong>Computer Architecture and Machine-Level Programming</strong><br>
+                        SE 339 <strong>Software Architecture and Design</strong><br>
+                        ComS 317 <strong>Software Testing</strong><br>
+                        Engl 314 <strong>Technical Communication</strong><br>
+                        ComS 230 <strong>Discrete Computational Structures</strong>
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
+
     <section id="projects">
-        <div class="container">
+        <div class="container" style="padding-bottom: 0;">
             <h2>Projects</h2>
+        </div>
+        <nav style="background-color: #333; padding: 10px;">
+            <ul>
+                <li><a href="#GymApp">Gym App</a></li>
+                <li><a href="#Pokémon">Pokémon</a></li>
+                <li><a href="#TypeRacer">Type Racer</a></li>
+                <li><a href="#VAWebsite">Voice Actor Website</a></li>
+                <li><a href="#DiscordBot">Discord Bot</a></li>
+                <li><a href="#personalPage">Personal Page</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="project" id="GymApp">
+                <div class="row">
+                    <div class="column">
+                        <h2>Gym App: Fit Fusion Network</h2>
+                        <p>This is a Social Networking Gym App. We designed it so users could connect with people they
+                            see at
+                            their gym. The main purpose of our app is to modivate users to acomplish their gym goals
+                            through the
+                            use of friends.</p>
+                    </div>
+                    <div class="column" style="text-align: center;">
+                        <p><img src="./images/skills/java.png" alt="java">
+                            <img src="./images/skills/android-studio.png" alt="android-studio">
+                        </p>
+                    </div>
+                </div>
+                <iframe width="100%" height="400"
+                        src="https://www.youtube.com/embed/7NcvrdOqD5g?si=Y4e3XqMX3kmVO7jh" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+            </div>
+
+
+            <div class="project" id="Pokémon">
+                <div class="row">
+                    <div class="column">
+                        <h2>Pokémon: ASCII Game</h2>
+                        <p></p>
+                    </div>
+                    <div class="column" style="text-align: center;">
+                        <p><img src="./images/skills/c.png" alt="c">
+                            <img src="./images/skills/cpp.png" alt="c++">
+                            <img src="./images/skills/makefile.png" alt="makefile">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="project" id="TypeRacer">
+                <div class="row">
+                    <div class="column">
+                        <h2>TypeRacer</h2>
+                        <p></p>
+                    </div>
+                    <div class="column" style="text-align: center;">
+                        <p><img src="./images/skills/c.png" alt="c">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="project" id="VAWebsite">
+                <div class="row">
+                    <div class="column">
+                        <h2>VAWebsite</h2>
+                        <p>As a team, Same Lane and I, deveopled a website for a voice actor, Slade, who wanted a new, clean look for his website.</p>
+                    </div>
+                    <div class="column" style="text-align: center;">
+                        <p>
+                            <img src="./images/skills/bootstrap.png" alt="bootstrap">
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img src="./images/Slade/Slade-mainPage.png" alt="Slade-mainPage" style="max-width: 95%;">
+                        <img src="./images/Slade/Slade-mainPage2.png" alt="Slade-mainPage2" style="max-width: 95%;">
+                    </div>
+                    <div class="column">
+                        <div class="row">
+                            <div class="column">
+                                <h2>Contact Me</h2>
+                                <p>
+                                    The website allows users to contact Slade with job proposals. We also included a link to Slade's LinkdIn to preview more of Slade's personal information. 
+                                </p>
+                            </div>
+                            <div class="column">
+                                <img src="./images/Slade/Slade-contactMe.png" alt="Slade-contactMe" style="max-width: 95%;">
+                            </div>
+                        </div>
+                        <h2>Sound Clip Carousel</h2>
+                        <div class="row">
+                            <div class="column">
+                                <p>
+                                    This website also features several of Slade's pervious works. We put these in a scrolling carousel inorder to show them off in a simple and sleek way.  
+                                </p>
+                            </div>
+                            <div class="column">
+                                <img src="./images/Slade/Slade-Carousel.png" alt="Slade-Carousel" style="max-width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project" id="DiscordBot">
+                <div class="row">
+                    <div class="column">
+                        <h2>DiscordBot</h2>
+                        <p></p>
+                    </div>
+                    <div class="column" style="text-align: center;">
+                        <p>
+                            <img src="./images/skills/python.png" alt="python">
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img src="./images/tic-tac-toe-bot/tttB-newGame.png" alt="gymApp">
+                    </div>
+                    <div class="column">
+                        <p></p>
+                    </div>
+                </div>
+                
+            </div>
             <div class="project">
-                <img src="./images/htmlAcss.png" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>The first project is related to develop a single Web page
-                    using only two technologies: HTML and CSS. The project
-                    consists on creating a single web page with a menu at the top
-                    know as Navitation Bar. We have to include text describing ourself
-                    and text describing the project. Additionally, we need to include
-                    two images: one image is of ourself and second image is anything
-                    related to the project itself.</p>
+                <div class="row">
+                    <div class="column">
+                        <h2>This Website</h2>
+                        <p>The first project is related to develop a single Web page
+                            using only two technologies: HTML and CSS. The project
+                            consists on creating a single web page with a menu at the top
+                            know as Navitation Bar. We have to include text describing ourself
+                            and text describing the project. Additionally, we need to include
+                            two images: one image is of ourself and second image is anything
+                            related to the project itself.</p>
+                    </div>
+                    <div class="column" style="text-align: center;">
+                        <img src="./images/skills/htmlAcss.png" alt="html" style="max-width: 45%;": 20;">
+                        <img src="./images/skills/github.png" alt="github" style="max-width: 25%;">
+                    </div>
+                </div>
             </div>
             <!-- Add more project divs here -->
+            <div class="project" id="">
+                <h2>More To Come...</h2>
+                <p></p>
+            </div>
         </div>
     </section>
     <section id="contact">
